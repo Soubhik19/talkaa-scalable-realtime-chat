@@ -12,5 +12,6 @@ async function init(){
     socketService.io.attach(httpServer); // attach socket io server to http server
     httpServer.listen(port,()=>{
         console.log(`Server is running on port ${port}`);});
+    socketService.initListeners(); // initialize socket io listeners
     }
     init();
